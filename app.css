@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap');
+
+:root {
+  --dark-blue: hsl(240, 38%, 20%);
+  --grayish-blue: hsl(240, 18%, 77%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  padding: 1.5rem;
+  display: grid;
+  gap: 2rem;
+  min-height: calc(100vh - 30px);
+  place-content: center;
+}
+
+.img-col {
+  background-image: url('images/pattern-bg.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 2rem 0;
+}
+
+.img-col .image {
+  width: 80%;
+  height: 90%;
+  object-fit: cover;
+  box-shadow: 2px 13px 22px 3px rgb(0 0 0 / 38%);
+}
+
+.img-col .btns {
+  position: absolute;
+  bottom: 25px;
+  left: auto;
+  right: auto;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 2em;
+  display: flex;
+  gap: 2rem;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+}
+
+.text-col {
+  text-align: center;
+  display: grid;
+  gap: 1rem;
+  max-width: 654.5px;
+  background-image: url('images/pattern-quotes.svg');
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: 60px;
+  padding: 1.5rem 0;
+}
+
+.text-col .review {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  font-weight: 300;
+}
+
+.text-col .name {
+  color: var(--dark-blue);
+  font-size: 1rem;
+}
+
+.text-col .career {
+  color: var(--grayish-blue);
+  font-weight: 500;
+}
+
+footer {
+  text-align: center;
+  font-size: 0.9rem;
+  padding: 0 1rem;
+}
+
+@media (min-width: 1180px) {
+  .container {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding: 3rem;
+    position: relative;
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+  .img-col {
+    order: 1;
+  }
+  .img-col .btns {
+    bottom: 10px;
+    left: 115px;
+  }
+  .text-col {
+    text-align: left;
+    transform: translateX(180px);
+    background-size: auto;
+    background-position: 98px top;
+    padding: 3.7rem 0;
+  }
+  .text-col .review {
+    font-size: 2rem;
+  }
+  .text-col .info {
+    display: flex;
+    gap: 1rem;
+  }
+  footer {
+    font-size: 1rem;
+  }
+}
